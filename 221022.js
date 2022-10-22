@@ -101,6 +101,48 @@ console.log("xyz =", xyz)
 
 
 
+// short circuit 
+// when we && two truthly values, the result will be the
+// LAST TRUTHLY VALUE
+console.log("2 && 3 =>", 2 && 3);
+console.log("3 && 2 =>", 3 && 2);
+
+// If the sequence contains a FALSY value it will always be the FIRST FALSY value
+console.log("0 && 2 && 3=>", 0 && 2 && 2);
+console.log("1 && NaN && 3=>", 1 && NaN && 3);
+
+// when we || two truthly values, the result will be the first truthly value
+console.log("2 || 3 =>", 2 || 3);
+console.log("3 || 2 =>", 3 || 2);
+
+// FALSY VALUES WILL BE CONSIDERED IF ALL THE VALUES ARE FALSLY. It will take the last Falsly value
+
+// the logical OR with truthy values is good for setting default value
+
+let gst = parseFloat(prompt("Please enter the gst percentage (press ENTER for default): "));
+
+// assuming that the user just press ENTER without typing in anything, then gst variable will store ""
+
+gst = gst || 0.07;
+// => gst = "" || 0.07
+// => gst = 0.07;
 
 
+
+
+for (let i = 0; i<10; i++){
+    console.log(i)
+}
+// let i = 0 -- initialization
+// i < 10 -- condition
+// i++ -- increment 
+
+// non-deterministic loops 
+// while loops are usually used for non-deterministic loops
+let n = parseInt(prompt("enter a number:"));
+while (n<=0) {
+    console.log("please enter a positive number");
+    n = pasreInt(prompt("Please enter a number"))
+}
+console.long("Thank you for your positivity!");
 
